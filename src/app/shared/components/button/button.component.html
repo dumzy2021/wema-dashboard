@@ -1,0 +1,10 @@
+<button [id]="id" [type]="type" [disabled]="disabled||loading" (click)="onBtnClick()" nz-button
+    [class]="'primary-btn '+ customClass" [nzGhost]="nzGhost" [nzType]="'primary'">
+
+
+    <ng-container *ngIf="loading">
+        <i nz-icon [nzType]="'loading'"></i>
+        Please wait...
+    </ng-container>
+    <ng-container *ngIf="!loading">{{btnText}} </ng-container>
+</button>

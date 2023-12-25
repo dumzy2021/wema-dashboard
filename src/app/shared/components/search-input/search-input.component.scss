@@ -1,0 +1,26 @@
+@import "../../../styles/components/input";
+.wema-search {
+  .ant-input-affix-wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 8px;
+    border: 0px solid var(--wema-color-primary);
+    background: var(--wema-color-gray);
+    ::ng-deep.icon {
+      font-size: 24px;
+      color: var(--wema-color-gray-300);
+    }
+  }
+  input {
+    height: 48px;
+    background: var(--wema-color-primary-700);
+    color: var(--wema-color-gray-200);
+    font-size: 14px;
+    &::placeholder {
+      color: var(--wema-color-gray-300);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+    }
+  }
+}

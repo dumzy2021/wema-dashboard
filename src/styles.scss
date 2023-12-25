@@ -1,1 +1,136 @@
 /* You can add global styles to this file, and also import other style files */
+@use "./app/styles/abstract/index" as *;
+@use "./app/styles/components/index" as *;
+@import "remixicon/fonts/remixicon.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+div,
+section,
+a,
+span,
+footer,
+nav,
+main,
+input,
+select,
+label {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+}
+
+i {
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+body {
+  background: var(--wema-color-gray);
+}
+img {
+  max-width: 100%;
+}
+.text-center {
+  text-align: center;
+}
+.m-0 {
+  margin: 0;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.mt-0 {
+  margin-top: 0;
+}
+.ml-0 {
+  margin-left: 0;
+}
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.mr-0 {
+  margin-right: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+.pb-0 {
+  padding-bottom: 0;
+}
+.pt-0 {
+  padding-top: 0;
+}
+.pl-0 {
+  padding-left: 0;
+}
+.pr-0 {
+  padding-right: 0;
+}
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.w-full {
+  width: 100%;
+}
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.row-pt {
+  padding-top: 2rem;
+}
+.row-pb {
+  padding-bottom: 2rem;
+}
+.text-center {
+  text-align: center;
+}
+
+// Remove Scrollbar
+.hide-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+@media screen and (max-width: 767px) {
+  .prevent-zoom-on-focus-input,
+  .prevent-zoom-on-focus-select {
+    font-size: 16px !important;
+  }
+}

@@ -1,0 +1,76 @@
+/* COLORS  */
+
+:root {
+  --wema-color-black: #000;
+  --wema-color-black-100: #171717;
+
+  --wema-color-yellow: #ffb648;
+  --wema-color-yellow-100: #ffac321a;
+
+  --wema-color-red: #f26464;
+  --wema-color-red-100: #f264641a;
+
+  --wema-color-green: #4bde97;
+  --wema-color-green-100: #63b67f1a;
+
+  --wema-color-white: #fff;
+  --wema-color-white-100: #ffffff33;
+
+  --wema-color-gray: #fafafa;
+  --wema-color-gray-100: #aaa;
+  --wema-color-gray-200: #bdbdbd;
+  --wema-color-gray-300: #d6d7e3;
+  --wema-color-gray-400: #d8d8d8;
+
+  --wema-color-primary: #990d81;
+
+  --wema-color-lightblue: #8392ab;
+}
+
+/* TEXT COLORS **/
+
+.wema-text-black {
+  color: var(--wema-color-black);
+}
+
+.wema-text-gray {
+  color: var(--wema-color-gray);
+}
+
+.wema-text-danger {
+  color: var(--wema-color-red);
+}
+
+.wema-text-primary {
+  color: var(--wema-color-primary);
+}
+
+.wema-text-success {
+  color: var(--wema-color-green);
+}
+
+.wema-text-white {
+  color: var(--wema-color-white);
+}
+
+/* BACKGROUND COLORS **/
+
+.wema-bg-black {
+  background: var(--wema-color-black);
+}
+
+.wema-bg-danger {
+  background: var(--wema-color-red);
+}
+
+.wema-bg-primary {
+  background: var(--wema-color-primary);
+}
+
+.wema-bg-success {
+  background: var(--wema-color-green);
+}
+
+.wema-bg-white {
+  background: var(--wema-color-white);
+}

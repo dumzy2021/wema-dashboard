@@ -1,0 +1,9 @@
+<div class="wema-search">
+    <nz-input-group [nzPrefix]="suffixIconSearch">
+        <input class="prevent-zoom-on-focus-input" type="search" nz-input [placeholder]="placeHolder"
+            (keyup)="search($event)" />
+    </nz-input-group>
+    <ng-template #suffixIconSearch>
+        <i class="ri-search-line icon"></i>
+    </ng-template>
+</div>

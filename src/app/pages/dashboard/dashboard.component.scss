@@ -1,0 +1,117 @@
+.dashboard {
+  padding-top: 1rem;
+  &-card {
+    display: flex;
+    gap: 10px;
+    padding: 1rem;
+    border-radius: 10px;
+    background: var(--wema-color-white);
+    height: 123px;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.06);
+    .card-icon {
+      width: 60px;
+      height: 60px;
+    }
+    .card-amount {
+      color: var(--wema-color-black-100);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 0;
+    }
+    .card-name {
+      color: var(--wema-color-gray-100);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .trend-up,
+    .trend-down {
+      color: var(--wema-color-green);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .trend-down {
+      color: var(--wema-color-red);
+    }
+    .trend-date {
+      color: var(--wema-color-gray-200);
+
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-left: 0.3rem;
+    }
+  }
+  &-chart {
+    padding: 2rem 1rem 1rem;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--wema-color-white);
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.06);
+
+    &.bar-chart {
+      background: var(--wema-color-primary);
+      .bar-chart-title {
+        margin-top: 1rem;
+        color: var(--wema-color-white);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.443px;
+      }
+    }
+  }
+  &-table {
+    border-radius: 12px;
+    background: var(--wema-color-white);
+    box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    .title {
+      color: var(--wema-color-black-100);
+      padding: 1rem;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    .user {
+      display: flex;
+      gap: 10px;
+      &-avatar {
+        border-radius: 8px;
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        background: var(--wema-color-gray-400);
+      }
+      &-name {
+        color: var(--wema-color-black-100);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.443px;
+      }
+      &-email {
+        color: var(--wema-color-lightblue);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.387px;
+      }
+    }
+  }
+}
+::ng-deep.wema-label {
+  color: var(--wema-color-white);
+}
