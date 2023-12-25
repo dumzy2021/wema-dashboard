@@ -1,0 +1,33 @@
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  color: var(--wema-color-gray-900);
+}
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link,
+.ant-pagination-item {
+  border: 0;
+}
+
+.ant-pagination-item {
+  background: var(--wema-color-white);
+  color: var(--wema-color-dark-100);
+  border: 0;
+  border-radius: 6px;
+}
+.ant-pagination-item-active {
+  border-radius: 6px;
+  background: var(--wema-color-primary-500);
+
+  border: 0;
+  &:hover {
+    border: 0;
+  }
+}
+
+.ant-pagination-item-active a {
+  color: var(--wema-color-dark-100);
+
+  &:hover {
+    color: var(--wema-color-dark-100);
+  }
+}

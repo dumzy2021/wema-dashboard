@@ -1,0 +1,19 @@
+:host {
+  .loading-content {
+    text-align: center;
+    &-message {
+      margin-top: 1rem;
+      font-size: 15px;
+    }
+    ::ng-deep {
+      .anticon {
+        font-size: 60px;
+
+        svg {
+          display: inline-block;
+          color: var(--payaccess-color-dark);
+        }
+      }
+    }
+  }
+}

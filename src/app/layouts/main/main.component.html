@@ -1,0 +1,117 @@
+<div class="main-shell">
+    <div class="side-bar-cover" (click)="isCollapsed = false"
+        [ngClass]="{'side-bar-cover-add':isCollapsed,'side-bar-cover-remove':!isCollapsed}">
+    </div>
+
+    <aside class="side-bar" [ngClass]="{'side-bar-add':isCollapsed,'side-bar-remove':!isCollapsed}">
+        <div class="brand text-center" routerLink="/dashboard" (click)="isCollapsed = !isCollapsed">
+            <img src="assets/svgs/wema.svg" alt="Wema Logo">
+        </div>
+        <div class="side-contents">
+
+            <!-- Menu -->
+            <ul>
+                <ng-container *ngFor="let link of menuList; let k= index">
+
+                    <!-- Has Sub Menus -->
+                    <ul *ngIf="link.hasSub" nz-menu nzMode="inline" class="dropdown-menus">
+
+                        <li nz-submenu [(nzOpen)]="openMap['sub'+k]" class="nav-link"
+                            (nzOpenChange)="openHandler('sub'+k)" [nzTitle]="titleRef">
+
+                            <ng-template #titleRef>
+                                <a>
+                                    <svg-icon [svgClass]="'svg-icon'" [src]="link.icon"></svg-icon>
+                                    <span>{{ link.title}}</span>
+                                </a>
+                            </ng-template>
+                            <ul>
+                                <li *ngFor="let sub of link.subs" nz-menu-item nzMatchRouter
+                                    [routerLinkActive]="'dropdown-list-active'" [routerLink]="sub.link"
+                                    (click)="$event.preventDefault();isCollapsed =false">
+
+                                    <a>
+                                        <svg-icon *ngIf="sub.icon" [svgClass]="'svg-icon'" [src]="sub.icon"></svg-icon>
+                                        <span>{{ sub.title}}</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+
+
+                    <!-- Has No Sub Menus -->
+                    <li *ngIf="!link.hasSub" (click)="isCollapsed =false" class="nav-link" #rla="routerLinkActive"
+                        [routerLinkActive]="'nav-active'">
+                        <a [routerLink]="link.link">
+                            <svg-icon [svgClass]="'svg-icon'" [src]="link.icon"></svg-icon>
+                            <span>{{ link.title }}</span>
+                        </a>
+                    </li>
+                </ng-container>
+
+
+
+
+
+            </ul>
+
+
+
+
+        </div>
+        <div class="side-footer">
+            <div class="side-footer-contents">
+
+                <div class="avatar-container">
+                </div>
+                <div class="user">
+                    <h3 class="user-name mb-0">
+                        Nafisa Sh.
+                    </h3>
+                    <p class="user-role mb-0">
+                        Support manager
+                    </p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div class="main-contents">
+        <div class="header">
+
+            <h3 class="route">
+                Dashboard
+            </h3>
+
+            <!-- <img class="icon-sm" src="assets/svgs/wema.svg" alt="Wema Logo"> -->
+
+            <div class="user-details">
+
+                <div class="search-container">
+                    <app-search-input></app-search-input>
+                </div>
+                <span class="theme">
+                    <img src="assets/svgs/theme.svg" alt="Theme">
+                </span>
+                <span class="notification">
+
+                    <img src="assets/svgs/notification.svg" alt="Notification">
+                </span>
+
+                <div class="avatar-container">
+                </div>
+
+                <div class="trigger-container" (click)="isCollapsed = !isCollapsed">
+                    <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+                </div>
+            </div>
+        </div>
+        <div class="contents">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+</div>

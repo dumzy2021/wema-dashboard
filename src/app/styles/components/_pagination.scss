@@ -1,0 +1,102 @@
+.pagination-content {
+  margin-top: 2.5rem;
+}
+.my-pagination {
+  ::ng-deep .ngx-pagination {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  ::ng-deep .ngx-pagination {
+    li a {
+      color: rgba(26, 40, 51, 0.5);
+    }
+    .current {
+      width: 30px;
+      height: 30px;
+      left: 513px;
+      top: 840px;
+      background: #7165e3;
+      box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a:hover {
+      background: transparent !important;
+    }
+    .pagination-next {
+      margin-left: 2rem;
+      color: #ffffff;
+    }
+    .pagination-previous {
+      margin-right: 2rem;
+      color: #ffffff;
+    }
+    .pagination-next,
+    .pagination-previous {
+      width: 40px;
+      height: 40px;
+      background: #7165e3;
+      box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .pagination-next.disabled,
+    .pagination-previous.disabled {
+      background: #ebe9fb;
+    }
+
+    .pagination-previous:before,
+    .pagination-previous.disabled:before,
+    .pagination-previous a:before {
+      margin-right: 0 !important;
+      color: #9da8b6;
+      font-size: 1.2rem;
+    }
+
+    .pagination-next:after,
+    .pagination-next.disabled:after,
+    .pagination-next a:after {
+      margin-left: 0 !important;
+      color: #9da8b6;
+      font-size: 1.2rem;
+    }
+    .pagination-previous a:before,
+    .pagination-next a:after {
+      color: #fff !important;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .my-pagination {
+    ::ng-deep .ngx-pagination {
+      .current {
+        width: 35px;
+        height: 35px;
+      }
+      .pagination-next,
+      .pagination-previous {
+        width: 50px;
+        height: 50px;
+      }
+      .pagination-previous:before,
+      .pagination-previous.disabled:before,
+      .pagination-previous a:before {
+        font-size: 1.6rem;
+      }
+
+      .pagination-next:after,
+      .pagination-next.disabled:after,
+      .pagination-next a:after {
+        margin-left: 0 !important;
+        color: #9da8b6;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

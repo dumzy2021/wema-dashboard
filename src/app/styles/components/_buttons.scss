@@ -1,0 +1,34 @@
+.primary-btn {
+  min-width: 200px;
+  // max-width: 250px;
+  height: 56px;
+  padding: 0 16px;
+  box-shadow: 0px 4px 23px rgba(113, 101, 227, 0.16);
+  border-radius: 8px;
+  margin: 30px 0 40px;
+  &-sm {
+    min-width: unset;
+    height: 40px;
+    border-radius: 10px;
+  }
+}
+
+.ant-btn-primary[disabled],
+.ant-btn-primary[disabled]:hover,
+.ant-btn-primary[disabled]:focus,
+.ant-btn-primary[disabled]:active {
+  color: var(--wema-color-white);
+  border-color: var(--wema-color-primary) !important;
+  opacity: 0.5;
+  background: var(--wema-color-primary) !important;
+  text-shadow: none;
+  box-shadow: none;
+}
+.ant-btn-background-ghost.ant-btn-primary[disabled],
+.ant-btn-background-ghost.ant-btn-primary[disabled]:hover,
+.ant-btn-background-ghost.ant-btn-primary[disabled]:focus,
+.ant-btn-background-ghost.ant-btn-primary[disabled]:active {
+  border-color: var(--wema-color-gray-600) !important;
+  background: var(--wema-color-gray-600) !important;
+  opacity: 0.5;
+}

@@ -1,0 +1,68 @@
+.ant-modal-wrap {
+  top: 0;
+  background: rgba(0, 0, 0, 0.47);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.ant-modal {
+  border-radius: 16px;
+}
+.ant-modal-footer,
+.ant-modal-header {
+  border: none;
+  padding: 16px 0px;
+  background: var(--wema-color-white-300);
+  border-bottom: none;
+  border-radius: 2px 2px 0 0;
+}
+
+.ant-modal-content {
+  background-color: var(--wema-color-white-300);
+  padding: 24px;
+  box-shadow: 0px 4px 23px rgba(113, 101, 227, 0.16) !important;
+  border-radius: 16px;
+  max-height: 720px;
+  overflow: hidden;
+  overflow-y: auto;
+  // &::-webkit-scrollbar {
+  //   width: 6px;
+
+  // }
+  // &::-webkit-scrollbar-track {
+  //   height: 4px;
+  //   width: 6px;
+  //   border-radius: 10px;
+  //   background: transparent;
+  //   margin-right: 10px;
+  // }
+  // &::-webkit-scrollbar-thumb {
+  //   background: var(--wema-color-primary);
+  //   border-radius: 10px;
+  // }
+}
+.ant-modal-body {
+  padding: 0 0 24px 0;
+  font-size: 14px;
+  line-height: 1.5715;
+  word-wrap: break-word;
+}
+.ant-modal-close {
+  top: 10px;
+  right: 5px;
+}
+.ant-modal-close-x {
+  svg-icon {
+    margin-top: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .ant-modal-header {
+    padding: 16px 24px 0;
+  }
+  .ant-modal-body {
+    padding: 1rem;
+  }
+}
